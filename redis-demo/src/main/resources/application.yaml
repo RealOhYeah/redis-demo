@@ -1,0 +1,13 @@
+logging:
+  level:
+    io.lettuce.core: debug
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
+spring:
+  redis:
+    sentinel:
+      master: mymaster  # 指定master的名称
+      nodes:    # 指定redis-sentinel集群信息
+        - 192.168.150.101:27001
+        - 192.168.150.101:27002
+        - 192.168.150.101:27003
